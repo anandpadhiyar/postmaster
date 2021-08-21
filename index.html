@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@400;500&family=Dosis:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Post Master</title>
+  </head>
+  <body data-prismjs-copy-timeout="500">
+    <section class="header">
+      <div class="navbar">
+        <h3><a href="">Postmaster</a></h3>
+        <ul>
+          <li><a class="active" href="">Home</a></li>
+          <li><a href="">About us</a></li>
+          <li><a href="">Contact us</a></li>
+        </ul>
+      </div>
+      <div class="humburger" id="burger">
+        <div class="line"></div>
+        <div class="line"></div>
+        <div class="line"></div>
+      </div>
+    </section>
+
+    <section class="body">
+      <div class="container">
+        <div class="url-input">
+          <label class="col-20" for="url">URL</label>
+          <input
+            id="url"
+            name="url"
+            placeholder="Enter URL here"
+            class="col-70"
+            type="text"
+          />
+        </div>
+
+        <div class="request-type-input">
+          <label class="col-20">Request type</label>
+          <div class="col-70">
+            <input
+              type="radio"
+              id="get"
+              value="GET"
+              name="request-type"
+              checked
+            />
+            <label for="get">GET</label>
+            <input type="radio" id="post" value="POST" name="request-type" />
+            <label for="post">POST</label>
+          </div>
+        </div>
+
+        <div class="request-data-input">
+          <label class="col-20">Data type</label>
+          <div class="col-70">
+            <input
+              type="radio"
+              id="json"
+              value="json"
+              name="request-data-type"
+              checked
+            />
+            <label for="json">JSON</label>
+            <input
+              type="radio"
+              id="key-value"
+              value="key-value"
+              name="request-data-type"
+            />
+            <label for="key-value">Key-value</label>
+          </div>
+        </div>
+
+        <div id="request-json">
+          <label for="json-data" class="col-20">Request Json</label>
+          <textarea
+            placeholder="Enter JSON data here"
+            name="json-data"
+            class="col-70"
+            id="json-data"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+
+        <div id="key-value-item">
+          <label for="" class="col-20">Parameters</label>
+          <div id="addNewKeyValuePair" class="col-70">
+            <div class="key-value-pair">
+              <input placeholder="key" id="key1" type="text" class="col-50" />
+              <input
+                placeholder="value"
+                id="value1"
+                type="text"
+                class="col-50"
+              />
+              <button id="addElement" class="col-10 button-element">+</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="submit-button">
+          <button id="submit">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="showOutput">
+      <pre
+        class="language-javascript"
+        data-prismjs-copy="Copy the JavaScript snippet!"
+      >
+          <code class="language-javascript" id="response">
+              
+          </code>
+      </pre>
+    </section>
+    <script src="js/prism.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
